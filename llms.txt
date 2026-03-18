@@ -23,3 +23,8 @@ freeqrcodegen.app is a free, browser-based QR code generator. It creates scannab
 
 ## Pages
 - / — Main QR code generator application
+- /vs-qrcode-monkey.html — Comparison of freeqrcodegen.app vs QRCode Monkey
+- /vs-qr-code-generator.html — Comparison of freeqrcodegen.app vs QR Code Generator
+- /qr-code-for-wifi.html — Guide to creating free WiFi QR codes
+- /qr-code-for-business-cards.html — Guide to creating QR codes for business cards using vCard
+- /qr-code-for-restaurants.html — Guide to creating QR codes for restaurant menus
