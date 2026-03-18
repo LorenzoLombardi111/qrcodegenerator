@@ -1,5 +1,5 @@
 var CACHE_NAME = 'qrgen-v1';
-var URLS_TO_CACHE = ['/', '/index.html', '/manifest.json', '/og-image.svg'];
+var URLS_TO_CACHE = ['/', '/index.html', '/manifest.json', '/og-image.svg', '/favicon.svg'];
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
