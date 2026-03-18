@@ -1,0 +1,25 @@
+# freeqrcodegen.app
+
+## Summary
+freeqrcodegen.app is a free, browser-based QR code generator. It creates scannable QR codes instantly with no login, no cloud processing, and no tracking.
+
+## Key Facts
+- 100% client-side — no data is ever sent to a server
+- Supports 7 input types: URL, Text, WiFi, Email, Phone, SMS, vCard
+- Exports to PNG (up to 2048px), SVG, and JPG — all watermark-free
+- Four error correction levels: L (7%), M (15%), Q (25%), H (30%)
+- Custom foreground and background colors with contrast checking
+- Works offline after first load via service worker
+- No login, no account, no ads, no cookies
+
+## Features
+- Live QR code preview as you type (200ms debounce)
+- WiFi QR codes with SSID, password, encryption type
+- vCard 3.0 contact cards
+- Color customization with hex input
+- Quiet zone (margin) toggle
+- Copy to clipboard as PNG
+- Responsive design with dark mode
+
+## Pages
+- / — Main QR code generator application
