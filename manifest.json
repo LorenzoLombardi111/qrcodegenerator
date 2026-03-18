@@ -5,5 +5,12 @@
   "theme_color": "#faf9f6",
   "display": "standalone",
   "start_url": "/",
-  "categories": ["utilities", "productivity"]
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
 }

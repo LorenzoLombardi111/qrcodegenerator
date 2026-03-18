@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free QR Code Generator Online - No Login Required | freeqrcodegen.app</title>
-<meta name="description" content="Free online QR code generator for URLs, WiFi, vCards, and more. No login, no watermarks, no tracking. Download PNG, SVG, JPG. freeqrcodegen.app">
+<meta name="description" content="Free online QR code generator for URLs, WiFi, vCards and more. No login, no watermarks, no tracking. Download PNG, SVG, JPG. freeqrcodegen.app">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://freeqrcodegen.app/">
 <meta property="og:title" content="Free QR Code Generator Online - No Login Required | freeqrcodegen.app">
 <meta property="og:description" content="Free online QR code generator for URLs, WiFi, vCards, and more. No login, no watermarks, no tracking. Download PNG, SVG, JPG.">
-<meta property="og:image" content="/og-image.svg">
+<meta property="og:image" content="https://freeqrcodegen.app/og-image.svg">
 <meta property="og:url" content="https://freeqrcodegen.app/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free QR Code Generator Online - No Login Required | freeqrcodegen.app">
 <meta name="twitter:description" content="Free online QR code generator for URLs, WiFi, vCards, and more. No login, no watermarks, no tracking.">
-<meta name="twitter:image" content="/og-image.svg">
+<meta name="twitter:image" content="https://freeqrcodegen.app/og-image.svg">
 <meta name="theme-color" content="#faf9f6">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="manifest" href="/manifest.json">
@@ -114,14 +114,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
 --bg:#faf9f6;--surface:#f4f2ee;--border:#e8e4dd;
---text-primary:#1a1917;--text-secondary:#6b6760;--text-muted:#9e9b96;
+--text-primary:#1a1917;--text-secondary:#6b6760;--text-muted:#8a8680;
 --accent:#C49A2A;--accent-hover:#A8831F;--accent-text:#ffffff;
 --destructive:#c0392b;
 --shadow:0 1px 3px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.04);
 }
 html.dark{
 --bg:#141412;--surface:#1e1c1a;--border:#2e2b27;
---text-primary:#f0ede8;--text-secondary:#9e9b96;--text-muted:#6b6760;
+--text-primary:#f0ede8;--text-secondary:#9e9b96;--text-muted:#87827c;
 --accent:#D4A835;--accent-hover:#C49A2A;--accent-text:#ffffff;
 --shadow:0 1px 3px rgba(0,0,0,0.3),0 2px 8px rgba(0,0,0,0.2);
 }
@@ -138,9 +138,11 @@ body{font-family:"Lora",serif;background:var(--bg);color:var(--text-primary);tra
 .header-actions{display:flex;align-items:center;gap:12px}
 
 /* Dark mode toggle */
-.theme-toggle{width:40px;height:24px;border-radius:12px;border:1px solid var(--border);background:var(--surface);cursor:pointer;position:relative;transition:all 0.15s ease;display:flex;align-items:center;padding:0 3px}
-.theme-toggle .knob{width:18px;height:18px;border-radius:50%;background:var(--text-muted);transition:all 0.15s ease;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:1}
+.theme-toggle{width:44px;height:44px;border-radius:12px;border:none;background:transparent;cursor:pointer;position:relative;transition:all 0.15s ease;display:flex;align-items:center;justify-content:center;padding:0}
+.theme-toggle-track{width:40px;height:24px;border-radius:12px;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;padding:0 3px;transition:all 0.15s ease}
+.theme-toggle .knob{width:18px;height:18px;border-radius:50%;background:var(--text-muted);transition:all 0.15s ease;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1}
 html.dark .theme-toggle .knob{transform:translateX(16px);background:var(--accent)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:12px}
 
 /* Buttons */
 .btn{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;padding:8px 16px;border-radius:8px;cursor:pointer;transition:all 0.15s ease;border:none;outline:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
@@ -151,7 +153,7 @@ html.dark .theme-toggle .knob{transform:translateX(16px);background:var(--accent
 .btn-secondary:hover{background:var(--surface)}
 .btn-destructive{background:transparent;border:1px solid var(--destructive);color:var(--destructive)}
 .btn-destructive:hover{background:var(--surface)}
-.btn-sm{padding:6px 12px;font-size:12px}
+.btn-sm{padding:6px 12px;font-size:12px;min-height:44px}
 .btn-text{background:none;border:none;color:var(--text-muted);font-family:"DM Sans",sans-serif;font-size:12px;cursor:pointer;padding:4px 8px}
 .btn-text:hover{color:var(--text-secondary)}
 
@@ -166,10 +168,12 @@ html.dark .theme-toggle .knob{transform:translateX(16px);background:var(--accent
 /* Mode selector */
 .mode-selector{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;margin-bottom:20px;-webkit-overflow-scrolling:touch}
 .mode-selector::-webkit-scrollbar{display:none}
-.mode-tab{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;transition:all 0.15s ease;background:var(--surface);color:var(--text-secondary);white-space:nowrap;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.mode-tab{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;padding:10px 16px;border-radius:8px;border:none;cursor:pointer;transition:all 0.15s ease;background:var(--surface);color:var(--text-secondary);white-space:nowrap;display:flex;align-items:center;gap:4px;flex-shrink:0;min-height:44px}
 .mode-tab:hover{background:var(--border)}
 .mode-tab.active{background:var(--accent);color:var(--accent-text)}
 .mode-tab .icon{font-size:14px}
+.mode-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:11px}
 
 /* Form */
 .form-group{margin-bottom:16px}
@@ -204,7 +208,7 @@ html.dark .theme-toggle .knob{transform:translateX(16px);background:var(--accent
 .color-row{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap}
 .color-field{display:flex;align-items:center;gap:8px}
 .color-field label{font-family:"DM Sans",sans-serif;font-size:12px;font-weight:500;color:var(--text-secondary);min-width:70px}
-input[type="color"]{width:40px;height:40px;border-radius:8px;border:1px solid var(--border);padding:0;cursor:pointer;background:none;-webkit-appearance:none}
+input[type="color"]{width:44px;height:44px;border-radius:8px;border:1px solid var(--border);padding:0;cursor:pointer;background:none;-webkit-appearance:none}
 input[type="color"]::-webkit-color-swatch-wrapper{padding:2px}
 input[type="color"]::-webkit-color-swatch{border:none;border-radius:5px}
 .hex-input{width:80px;font-family:"DM Sans",sans-serif;font-size:13px;padding:6px 8px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text-primary);outline:none}
@@ -213,7 +217,7 @@ input[type="color"]::-webkit-color-swatch{border:none;border-radius:5px}
 
 /* Error correction segmented */
 .segmented{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:8px}
-.segmented button{flex:1;padding:6px 12px;border:none;background:var(--bg);color:var(--text-secondary);font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s ease;border-right:1px solid var(--border)}
+.segmented button{flex:1;padding:6px 12px;min-height:44px;border:none;background:var(--bg);color:var(--text-secondary);font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s ease;border-right:1px solid var(--border)}
 .segmented button:last-child{border-right:none}
 .segmented button.active{background:var(--accent);color:var(--accent-text)}
 .segmented button:hover:not(.active){background:var(--surface)}
@@ -221,9 +225,10 @@ input[type="color"]::-webkit-color-swatch{border:none;border-radius:5px}
 
 /* Toggle switch */
 .toggle-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.toggle{width:40px;height:22px;border-radius:11px;background:var(--border);position:relative;cursor:pointer;transition:all 0.15s ease;flex-shrink:0}
-.toggle.on{background:var(--accent)}
-.toggle .toggle-knob{width:18px;height:18px;border-radius:50%;background:var(--bg);position:absolute;top:2px;left:2px;transition:all 0.15s ease}
+.toggle{width:40px;height:44px;border-radius:11px;background:transparent;position:relative;cursor:pointer;transition:all 0.15s ease;flex-shrink:0}
+.toggle::before{content:'';position:absolute;left:0;top:11px;width:40px;height:22px;border-radius:11px;background:var(--border);transition:all 0.15s ease}
+.toggle.on::before{background:var(--accent)}
+.toggle .toggle-knob{width:18px;height:18px;border-radius:50%;background:var(--bg);position:absolute;top:13px;left:2px;transition:all 0.15s ease}
 .toggle.on .toggle-knob{left:20px;background:var(--accent-text)}
 .toggle-label{font-family:"DM Sans",sans-serif;font-size:13px;color:var(--text-secondary)}
 
@@ -311,7 +316,7 @@ html.dark .qr-preview-container{background:#fff}
   <span class="brand">freeqrcodegen.app</span>
   <div class="header-actions">
     <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle dark mode">
-      <div class="knob"><span class="theme-icon">☀️</span></div>
+      <div class="theme-toggle-track"><div class="knob"><span class="theme-icon">☀️</span></div></div>
     </div>
     <button class="btn btn-secondary btn-sm" id="resetBtn">Reset</button>
   </div>
@@ -319,14 +324,14 @@ html.dark .qr-preview-container{background:#fff}
 
 <main class="app-main">
   <div class="input-panel">
-    <nav class="mode-selector" id="modeSelector" aria-label="QR code content type">
-      <button class="mode-tab active" data-mode="url"><span class="icon">🔗</span> URL</button>
-      <button class="mode-tab" data-mode="text"><span class="icon">📝</span> Text</button>
-      <button class="mode-tab" data-mode="wifi"><span class="icon">📶</span> WiFi</button>
-      <button class="mode-tab" data-mode="email"><span class="icon">✉️</span> Email</button>
-      <button class="mode-tab" data-mode="phone"><span class="icon">📞</span> Phone</button>
-      <button class="mode-tab" data-mode="sms"><span class="icon">💬</span> SMS</button>
-      <button class="mode-tab" data-mode="vcard"><span class="icon">👤</span> vCard</button>
+    <nav class="mode-selector" id="modeSelector" role="tablist" aria-label="QR code content type">
+      <button class="mode-tab active" data-mode="url" role="tab" aria-selected="true"><span class="icon">🔗</span> URL</button>
+      <button class="mode-tab" data-mode="text" role="tab" aria-selected="false"><span class="icon">📝</span> Text</button>
+      <button class="mode-tab" data-mode="wifi" role="tab" aria-selected="false"><span class="icon">📶</span> WiFi</button>
+      <button class="mode-tab" data-mode="email" role="tab" aria-selected="false"><span class="icon">✉️</span> Email</button>
+      <button class="mode-tab" data-mode="phone" role="tab" aria-selected="false"><span class="icon">📞</span> Phone</button>
+      <button class="mode-tab" data-mode="sms" role="tab" aria-selected="false"><span class="icon">💬</span> SMS</button>
+      <button class="mode-tab" data-mode="vcard" role="tab" aria-selected="false"><span class="icon">👤</span> vCard</button>
     </nav>
 
     <div id="formContainer">
@@ -435,7 +440,7 @@ html.dark .qr-preview-container{background:#fff}
     </div>
 
     <div class="customize-section">
-      <div class="customize-header" id="customizeToggle">
+      <div class="customize-header" id="customizeToggle" role="button" tabindex="0" aria-expanded="false" aria-controls="customizeContent">
         <span>Customize</span>
         <span class="chevron">▾</span>
       </div>
@@ -444,14 +449,14 @@ html.dark .qr-preview-container{background:#fff}
           <div class="form-label" style="margin-bottom:8px">Colors</div>
           <div class="color-row">
             <div class="color-field">
-              <label>QR Color</label>
-              <input type="color" id="fgColor" value="#000000">
-              <input type="text" class="hex-input" id="fgHex" value="#000000" maxlength="7">
+              <label for="fgColor">QR Color</label>
+              <input type="color" id="fgColor" value="#000000" aria-label="QR foreground color">
+              <input type="text" class="hex-input" id="fgHex" value="#000000" maxlength="7" aria-label="QR foreground color hex value">
             </div>
             <div class="color-field">
-              <label>Background</label>
-              <input type="color" id="bgColor" value="#FFFFFF">
-              <input type="text" class="hex-input" id="bgHex" value="#FFFFFF" maxlength="7">
+              <label for="bgColor">Background</label>
+              <input type="color" id="bgColor" value="#FFFFFF" aria-label="QR background color">
+              <input type="text" class="hex-input" id="bgHex" value="#FFFFFF" maxlength="7" aria-label="QR background color hex value">
             </div>
           </div>
           <div class="contrast-warning" id="contrastWarning" style="display:none">Low contrast — may not scan reliably</div>
@@ -459,17 +464,17 @@ html.dark .qr-preview-container{background:#fff}
 
           <div style="border-top:1px solid var(--border);margin:16px 0;padding-top:16px">
             <div class="form-label" style="margin-bottom:8px">Error Correction</div>
-            <div class="segmented" id="ecSelector">
-              <button data-ec="L">L</button>
-              <button data-ec="M" class="active">M</button>
-              <button data-ec="Q">Q</button>
-              <button data-ec="H">H</button>
+            <div class="segmented" id="ecSelector" role="radiogroup" aria-label="Error correction level">
+              <button data-ec="L" role="radio" aria-checked="false">L</button>
+              <button data-ec="M" role="radio" aria-checked="true" class="active">M</button>
+              <button data-ec="Q" role="radio" aria-checked="false">Q</button>
+              <button data-ec="H" role="radio" aria-checked="false">H</button>
             </div>
             <div class="ec-hint">Higher correction = scannable even if damaged, but denser code</div>
           </div>
 
           <div class="toggle-row">
-            <div class="toggle on" id="quietZoneToggle" role="switch" tabindex="0" aria-checked="true">
+            <div class="toggle on" id="quietZoneToggle" role="switch" tabindex="0" aria-checked="true" aria-label="Include quiet zone margin">
               <div class="toggle-knob"></div>
             </div>
             <span class="toggle-label">Include margin (recommended for scanning)</span>
@@ -502,12 +507,12 @@ html.dark .qr-preview-container{background:#fff}
     </div>
 
     <div class="download-row">
-      <button class="btn btn-primary btn-sm" id="downloadPng" disabled>PNG</button>
-      <button class="btn btn-secondary btn-sm" id="downloadSvg" disabled>SVG</button>
-      <button class="btn btn-secondary btn-sm" id="downloadJpg" disabled>JPG</button>
+      <button class="btn btn-primary btn-sm" id="downloadPng" disabled aria-label="Download QR code as PNG">PNG</button>
+      <button class="btn btn-secondary btn-sm" id="downloadSvg" disabled aria-label="Download QR code as SVG">SVG</button>
+      <button class="btn btn-secondary btn-sm" id="downloadJpg" disabled aria-label="Download QR code as JPG">JPG</button>
     </div>
     <div class="copy-row">
-      <button class="btn btn-secondary btn-sm" id="copyBtn" disabled>📋 Copy to Clipboard</button>
+      <button class="btn btn-secondary btn-sm" id="copyBtn" disabled aria-label="Copy QR code to clipboard as PNG">📋 Copy to Clipboard</button>
     </div>
 
     <div class="qr-info" id="qrInfo" style="display:none">
@@ -533,7 +538,7 @@ html.dark .qr-preview-container{background:#fff}
 
 <div class="attribution"><span class="full">by freesuite.app</span><span class="short">freesuite.app</span></div>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <article class="seo-content">
   <h1>Free QR Code Generator Online — No Login Required</h1>
@@ -2984,7 +2989,9 @@ function showToast(msg) {
 function setMode(mode) {
   state.mode = mode;
   document.querySelectorAll('.mode-tab').forEach(function(tab) {
-    tab.classList.toggle('active', tab.dataset.mode === mode);
+    var isActive = tab.dataset.mode === mode;
+    tab.classList.toggle('active', isActive);
+    tab.setAttribute('aria-selected', String(isActive));
   });
   document.querySelectorAll('.mode-form').forEach(function(form) {
     form.style.display = form.id === 'form-' + mode ? '' : 'none';
@@ -3340,13 +3347,16 @@ function initCustomize() {
   function toggle() {
     var open = content.classList.toggle('open');
     header.classList.toggle('open', open);
+    header.setAttribute('aria-expanded', String(open));
   }
 
   header.addEventListener('click', toggle);
+  header.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
 
   if (isDesktop) {
     content.classList.add('open');
     header.classList.add('open');
+    header.setAttribute('aria-expanded', 'true');
   }
 }
 
@@ -3401,7 +3411,7 @@ function init() {
     document.getElementById('fgHex').value = '#000000';
     document.getElementById('bgColor').value = '#FFFFFF';
     document.getElementById('bgHex').value = '#FFFFFF';
-    document.querySelectorAll('#ecSelector button').forEach(function(b) { b.classList.toggle('active', b.dataset.ec === 'M'); });
+    document.querySelectorAll('#ecSelector button').forEach(function(b) { var a = b.dataset.ec === 'M'; b.classList.toggle('active', a); b.setAttribute('aria-checked', String(a)); });
     var qz = document.getElementById('quietZoneToggle');
     qz.classList.add('on'); qz.setAttribute('aria-checked','true');
     document.querySelectorAll('#sizeSelector button').forEach(function(b) { b.classList.toggle('active', b.dataset.size === '1024'); });
@@ -3466,7 +3476,7 @@ function init() {
   document.querySelectorAll('#ecSelector button').forEach(function(btn) {
     btn.addEventListener('click', function() {
       state.ecLevel = this.dataset.ec;
-      document.querySelectorAll('#ecSelector button').forEach(function(b) { b.classList.toggle('active', b.dataset.ec === state.ecLevel); });
+      document.querySelectorAll('#ecSelector button').forEach(function(b) { var a = b.dataset.ec === state.ecLevel; b.classList.toggle('active', a); b.setAttribute('aria-checked', String(a)); });
       savePrefs(); generateQR();
     });
   });

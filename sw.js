@@ -1,5 +1,5 @@
 var CACHE_NAME = 'qrgen-v1';
-var URLS_TO_CACHE = ['/', '/index.html', '/manifest.json', '/og-image.svg', '/favicon.svg'];
+var URLS_TO_CACHE = ['/', '/index.html', '/manifest.json', '/og-image.svg', '/favicon.svg', '/vs-qrcode-monkey.html', '/vs-qr-code-generator.html', '/qr-code-for-wifi.html', '/qr-code-for-business-cards.html', '/qr-code-for-restaurants.html'];
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

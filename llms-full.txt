@@ -259,11 +259,11 @@ It depends on your use case. If you are running a marketing campaign and need to
 
 [freeqrcodegen.app vs QRCode Monkey](/vs-qrcode-monkey.html)
 
-[freeqrcodegen.app vs Flowcode](/vs-flowcode.html)
+[Free QR Code for WiFi](/qr-code-for-wifi.html)
 
-[freeqrcodegen.app vs Beaconstac](/vs-beaconstac.html)
+[Free QR Code for Business Cards](/qr-code-for-business-cards.html)
 
-[freeqrcodegen.app vs Adobe QR Code Generator](/vs-adobe-qr-code-generator.html)
+[Free QR Code for Restaurants](/qr-code-for-restaurants.html)
 
 ## Free QR Code Generator for WiFi Networks
 
@@ -327,11 +327,11 @@ Yes. iPhones running iOS 11 or later and Android phones running Android 10 or la
 
 ### Is it safe to share my WiFi password via QR code?
 
-WiFi QR codes are as safe as sharing your password verbally or on paper. The password is encoded in the QR pattern itself, so only someone who physically scans the code can read it. For extra security, consider setting up a guest network with a separate password that you can change periodically.
+WiFi QR codes are as safe as sharing your password verbally or on paper. The password is encoded in the QR pattern itself, so only someone who physically scans the code can read it. For extra security, use a guest network with a separate password.
 
 ### What encryption types are supported?
 
-The WiFi QR code standard supports WPA/WPA2 (the most common and recommended option), WEP (legacy, not recommended), and open networks with no encryption. freeqrcodegen.app supports all three options in its WiFi mode.
+The WiFi QR code standard supports WPA/WPA2 (most common), WEP (legacy), and open networks with no encryption. freeqrcodegen.app supports all three options.
 
 ### Can I hide my network name in the QR code?
 
@@ -343,13 +343,13 @@ Yes. If your network is hidden (not broadcasting its SSID), you can mark it as a
 
 [Free QR Code Generator](https://freeqrcodegen.app/)
 
-[Free QR Code Generator for URLs](https://freeqrcodegen.app/qr-code-for-url.html)
+[Free QR Code for Business Cards](https://freeqrcodegen.app/qr-code-for-business-cards.html)
 
-[Free QR Code Generator for vCards](https://freeqrcodegen.app/qr-code-for-vcard.html)
+[Free QR Code for Restaurants](https://freeqrcodegen.app/qr-code-for-restaurants.html)
 
-[Free QR Code Generator for Email](https://freeqrcodegen.app/qr-code-for-email.html)
+[freeqrcodegen.app vs QRCode Monkey](https://freeqrcodegen.app/vs-qrcode-monkey.html)
 
-[Free QR Code Generator for SMS](https://freeqrcodegen.app/qr-code-for-sms.html)
+[freeqrcodegen.app vs QR Code Generator](https://freeqrcodegen.app/vs-qr-code-generator.html)
 
 ## Free QR Code Generator for Business Cards
 
@@ -405,15 +405,15 @@ If your printer requires a raster image, download PNG from [freeqrcodegen.app](h
 
 ### What size should a QR code be on a business card?
 
-A QR code on a business card should be at least 2cm × 2cm (approximately 0.8 × 0.8 inches). This ensures reliable scanning by most smartphone cameras. Leave a quiet zone of at least 2mm of blank space around all four sides of the code to help scanners detect it properly.
+A QR code on a business card should be at least 2cm × 2cm (approximately 0.8 × 0.8 inches). This ensures reliable scanning by most smartphone cameras. Leave a quiet zone of at least 2mm of blank space around all four sides of the code.
 
 ### What information should I put in a business card QR code?
 
-At minimum, include your full name, phone number, and email address. You can also add your company name, job title, website URL, and office address. Avoid including sensitive information like personal social media accounts unless they are professionally relevant. Keeping the data focused ensures the QR pattern stays simple and easy to scan.
+At minimum, include your full name, phone number, and email address. You can also add your company name, job title, website URL, and office address. Avoid including sensitive information like personal social media accounts unless they are professionally relevant.
 
 ### Should I use PNG or SVG for printing?
 
-SVG is the best format for printing business cards. SVG files are vector-based, meaning they scale to any size without losing quality or becoming pixelated. If your print shop requires a raster format, use PNG at 2048px or higher resolution. Avoid JPEG, as its compression can blur the sharp edges QR scanners rely on.
+SVG is the best format for printing business cards. SVG files are vector-based, meaning they scale to any size without losing quality. If your print shop requires a raster format, use PNG at 2048px or higher resolution.
 
 ### What error correction level is best for business cards?
 
@@ -427,13 +427,13 @@ Yes. [freeqrcodegen.app](https://freeqrcodegen.app/) lets you customize foregrou
 
 [Free QR Code Generator — freeqrcodegen.app](https://freeqrcodegen.app/)
 
-[Free QR Code Generator for Wi-Fi Networks](https://freeqrcodegen.app/qr-code-for-wifi.html)
+[Free QR Code Generator for WiFi Networks](https://freeqrcodegen.app/qr-code-for-wifi.html)
 
 [Free QR Code Generator for Restaurants](https://freeqrcodegen.app/qr-code-for-restaurants.html)
 
-[Free QR Code Generator for Small Business](https://freeqrcodegen.app/qr-code-for-small-business.html)
+[freeqrcodegen.app vs QRCode Monkey](https://freeqrcodegen.app/vs-qrcode-monkey.html)
 
-[Free QR Code Generator for Events](https://freeqrcodegen.app/qr-code-for-events.html)
+[freeqrcodegen.app vs QR Code Generator](https://freeqrcodegen.app/vs-qr-code-generator.html)
 
 © freeqrcodegen.app
 
@@ -539,10 +539,10 @@ A static QR code works perfectly for restaurant menus. It encodes a fixed URL, a
 
 [Free QR Code Generator — Home](https://freeqrcodegen.app/)
 
-[Free QR Code Generator for Small Businesses](https://freeqrcodegen.app/qr-code-for-small-business.html)
+[Free QR Code Generator for WiFi](https://freeqrcodegen.app/qr-code-for-wifi.html)
 
-[Free QR Code Generator for Wi-Fi](https://freeqrcodegen.app/qr-code-for-wifi.html)
+[Free QR Code Generator for Business Cards](https://freeqrcodegen.app/qr-code-for-business-cards.html)
 
-[Free QR Code Generator for Events](https://freeqrcodegen.app/qr-code-for-events.html)
+[freeqrcodegen.app vs QRCode Monkey](https://freeqrcodegen.app/vs-qrcode-monkey.html)
 
-[Free QR Code Generator for vCards](https://freeqrcodegen.app/qr-code-for-vcard.html)
+[freeqrcodegen.app vs QR Code Generator](https://freeqrcodegen.app/vs-qr-code-generator.html)
